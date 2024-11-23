@@ -129,8 +129,8 @@
                             </svg>
                         </button>
                         <ul class="formats-list">
-                            <li class="formats-item">
-                                <article class="format-card">
+                            <li class="formats-item ">
+                                <article class="format-card walrus">
                                     <h3 class="format-title" lang="en">Walrus</h3>
                                         <div class="format-text">
                                             <p>Площа: до 120 м2</p>
@@ -168,7 +168,7 @@
                                 </article>
                             </li>                  
                         </ul>
-                        <button class="carousel-button" type="button">
+                        <button class="carousel-button next" type="button">
                             <svg width="16px", height="16px">
                                 <use href="./images/sprite.svg#icon-arrow"></use>
                             </svg>
@@ -183,7 +183,48 @@
                     <div class="contact-form">
                         <h2 class="contacts-title section-title">Приєднуся до мережі пекарень</h2>
                         <p>Заповни форму, щоб ми звʼязались з тобою!</p>
-                        <!--form-->
+                        <form name="contact-form" autocomplete="off">
+
+                            <div class="form-field">
+                                <label class="form-label visually-hidden" for="user-name">Імʼя</label>
+                                <input 
+                                    class="form-input" 
+                                    type="text"  
+                                    id="user-name" 
+                                    name="user-name"
+                                    placeholder="Імʼя"
+                                />
+                            </div>
+                            
+                            <div class="form-field">
+                                <label class="form-label visually-hidden" for="user-tel">Телефон</label>
+                                <input 
+                                    class="form-input"  
+                                    type="tel"  
+                                    id="user-tel" 
+                                    name="user-tel"
+                                    placeholder="Телефон"
+                                />
+                            </div>
+                           
+                    
+                            <div class="form-field">
+                                <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
+                                <input 
+                                    class="form-input"  
+                                    type="email"  
+                                    id="user-email" 
+                                    name="user-email"
+                                    placeholder="Електронна пошта"
+                                />
+                            </div>
+                          
+                            <button class="form-button button" type="submit">Замовити дзвінок</button>
+                            <p class="form-terms">
+                                Натискаючи на форму я погоджуюсь з
+                                <a class="form-terms-link" href="#">політикою конфіденційності</a>
+                            </p>
+                        </form>
                     </div>  
 
                     <iframe 
@@ -258,6 +299,50 @@
     <div class="backdrop">
         <div class="modal">
             <button class="modal-btn-close" type="button">Close</button>
+            <h2>Замовити дзвінок</h2>
+            <p>Залишіть заявку та наш спеціаліст звʼяжеться з Вами</p>
+            <form name="modal-form" autocomplete="on" novalidate>
+
+                <div class="form-field">
+                    <label class="form-label visually-hidden" for="user-name">Імʼя</label>
+                    <input 
+                        class="form-input" 
+                        type="text"  
+                        id="user-name" 
+                        name="user-name"
+                        placeholder="Імʼя"
+                    />
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label visually-hidden" for="user-tel">Телефон</label>
+                    <input 
+                        class="form-input"  
+                        type="tel"  
+                        id="user-tel" 
+                        name="user-tel"
+                        placeholder="Телефон"
+                    />
+                </div>
+               
+        
+                <div class="form-field">
+                    <label class="form-label visually-hidden" for="user-email">Електронна пошта</label>
+                    <input 
+                        class="form-input"  
+                        type="email"  
+                        id="user-email" 
+                        name="user-email"
+                        placeholder="Електронна пошта"
+                    />
+                </div>
+              
+                <button class="form-button button" type="submit">Замовити дзвінок</button>
+                <p class="form-terms">
+                    Натискаючи на форму я погоджуюсь з
+                    <a class="form-terms-link" href="#">політикою конфіденційності</a>
+                </p>
+            </form>
         </div>
     </div>
 
