@@ -33,19 +33,25 @@
 
   
 :root {
-    --color-brand-light: #819b57;
+    --color-brand-normal: #819b57;
+    --color-brand-light: #CFCFBC;
     --color-brand-dark: #465929;
     --color-primary-light: #FAF4EA;
     --color-primary-dark: #31261A;
+    --color-secondary-dark: #A18268;
 }
 
 /* Base */
-*{
+*,
+*::after,
+*::before{
     box-sizing: border-box;
 }
 
 body {
+    background-color: var(--color-primary-light);
     color: var(--color-primary-dark);
+    font-family: Poppins, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;
@@ -54,6 +60,10 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
+}
+
+.a {
+    display: inline-block;
 }
 
 .visually-hidden {
@@ -84,11 +94,13 @@ address {
 
 ul {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .button {
     color: var(--color-primary-light);
-    background-color: var(--color-brand-light);
+    background-color: var(--color-brand-normal);
     border: 2px solid var(--color-brand);
     border-radius: 8px;
     cursor: pointer;
@@ -108,30 +120,66 @@ ul {
 }
 
 .link:hover {
-    color: var(--color-brand-light);
-    font-weight: 600;
+    color: var(--color-brand-normal);
+}
+
+/* Header */
+
+.header {
+    background-color: rgb(175, 224, 254);
+}
+
+.header-container {
+    display: flex;
+    gap: 40px;
+}
+
+.header-nav {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 64px;
+    flex-grow: 1;
+    justify-content: center;
 }
 
 /* Hero-section */
+.hero-section {
+    padding: 272px 0;
+    background-image: url('../images/couple-in-backery.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
 
 .hero-title {
     color: var(--color-primary-light);
-    font-family: Poppins, sans-serif;
     text-align: center;
     font-size: 128px;
     font-weight: 900;
 }
 
 .hero-title .accent {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 
 /* Advantages section */
 
+.advantages-section {
+    background-color: var(--color-brand-normal);
+    padding: 16px 0;
+}
+
 .advantages-list {
-    background-color: var(--color-brand-light);
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
     color: var(--color-primary-light);
-    margin: 0;
 }
 
 .advantages-item {
@@ -144,13 +192,15 @@ ul {
 }
 
 .section-title {
-    font-size: 84px;
+    font-size: 64px;
     font-weight: 900;
     line-height: 1.3;
 }
-.traditions-title {
-    margin-bottom: 42px;
+
+.section-title.centered {
+    text-align: center;
 }
+
 
 /* Traditions section */
 
@@ -164,8 +214,24 @@ section.traditions-section {
 }
 
 .traditions-text .brand {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
     font-weight: 600;
+}
+
+.traditions-title {
+    margin-bottom: 42px;
+}
+
+.traditions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+.traditions-content {
+    max-width: 710px;
+}
+.traditions-text.limited {
+    max-width: 340px;
 }
 
 /* Chefs section */
@@ -176,9 +242,87 @@ section.traditions-section {
     font-weight: 600;    
 }
 .chefs-title {
-    margin-bottom: 80px;
+    margin: 0 auto 80px;
+    position: relative;
 }
+
+.chefs-title::before {
+    left: 0;
+}
+
+.chefs-title::after {   
+    right: 0;
+}
+
+.chefs-title::before,
+.chefs-title::after {
+    display: block;
+    width: 352px;
+    height: 2px;
+    background-color: var(--color-brand-light);
+    content: '';
+    bottom: 24px;
+    position: absolute;
+}
+
+.chefs-list {
+    display: flex;  
+    gap: 40px 30px;
+    flex-wrap: wrap;
+}
+
+.chefs-item {
+    flex-basis: calc((100% - 30px) / 2);
+}
+
+.chef-card {
+    display: flex;
+    gap: 30px;
+}
+
+.chef-photo {
+    border-radius: 4px 4px 4px 200px;
+    box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
+}
+
+.chef-text p {
+    margin-bottom: 24px;
+}
+
+.chef-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* Format section */
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+.formats-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.formats-item {
+    flex-basis: calc((100% - 40px) / 3);
+}
+
+    
+
+.format-card {
+    background-image: -webkit-gradient(
+        180deg,
+        rgba(49, 38, 26, 0) 55.21%,
+        rgba(49, 38, 26, 0.71) 72.92%,
+        var(--color-primary-dark) 100%,
+    );
+    height: 444px;
+    border:  1px solid lightsteelblue; /* REMOVE */
+    border-radius: 16px;
+    padding: 24px;
+}
 .formats-title {
     margin-bottom: 80px;
 }
@@ -192,13 +336,92 @@ section.traditions-section {
     font-weight: 300;
 }
 
+/* Carousel */
+.carousel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid var(--color-primary-dark);
+    fill: var(--color-primary-dark);
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    background-color: var(--color-primary-dark);
+    fill: var(--color-primary-light);
+}
+
+
 /* Contacts */
+.contact-section {
+    padding-bottom: 96px;
+}
 .contacts-title {
     margin-bottom: 16px;
+}
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+.contact-map {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
 }
 
 
 /* Footer */
+
+.footer {
+    background-image: url(../images/footer-background.png);
+    background-color: var(--color-primary-dark);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 32px 0;
+    position: relative;
+    
+}
+.footer::before,
+.footer::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    background-repeat: no-repeat;
+}
+
+.footer::before {
+    background-image: url(../images/decor-small-bread.png);
+    width: 180px;
+    height: 120px;
+}
+
+.footer::after {
+    background-image: url(../images/decor-big-bread.png);
+    width: 380px;
+    height: 190px;
+    right: 0;
+}
+
+.footer-container {
+    display: flex;
+    gap: 20px;
+}
+.footer-nav,
+.footer-address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+.footer-logo, 
+.footer-menu {
+    flex-grow: 1;
+}
 
 .address-link {
     color: var(--color-primary-light);
@@ -207,10 +430,54 @@ section.traditions-section {
     text-decoration: none;
 }
 
+.address-list,
+.address-info {
+    flex-grow: 1;
+}
+
+.address-icon {
+    fill: var(--color-primary-light);
+}
+
 .address-link:hover {
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 
 .address-copyright-text {
     font-size: 14px;
+    font-weight: 300;
+    color: var(--color-secondary-dark);
+}
+
+/* Modal */
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    width: 880px;
+    height: 680px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
+    position: relative;
+}
+
+.modal-btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }
