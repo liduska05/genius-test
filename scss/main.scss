@@ -1,17 +1,24 @@
+@use './components/buttons' ;
+@use './components/carousel-button' ;
+@use './components/chef-card' ;
+@use './components/format-card' ;
+@use './components/inputs' ;
+@use './components/links' ;
+
 @use './base' ;
-@use './components/advantages' ;
-@use './components/carousel' ;
-@use './components/chefs' ;
-@use './components/contacts' ;
-@use './components/footer' ;
-@use './components/form' ;
-@use './components/formats' ;
-@use './components/header' ;
-@use './components/hero' ;
-@use './components/link' ;
-@use './components/modal' ;
-@use './components/traditions' ;
+@use './layouts/advantages' ;
+@use './layouts/chefs' ;
+@use './layouts/contacts' ;
+@use './layouts/footer' ;
+@use './layouts/formats' ;
+@use './layouts/form-terms' ;
+@use './layouts/header' ;
+@use './layouts/hero' ;
+@use './layouts/modal' ;
+@use './layouts/section' ;
+@use './layouts/traditions' ;
 
 @use './utils/fonts' ;
+@use './utils/text' ;
 @use './utils/utils' ;
 @use './utils/variables' 
