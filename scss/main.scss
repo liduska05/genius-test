@@ -1,24 +1,26 @@
-@use './components/buttons' ;
-@use './components/carousel-button' ;
-@use './components/chef-card' ;
-@use './components/format-card' ;
-@use './components/inputs' ;
-@use './components/links' ;
+@import './utils/fonts' ;
+@import './utils/variables' ;
+@import './utils/text' ;
+@import './utils/utils' ;
 
-@use './base' ;
-@use './layouts/advantages' ;
-@use './layouts/chefs' ;
-@use './layouts/contacts' ;
-@use './layouts/footer' ;
-@use './layouts/formats' ;
-@use './layouts/form-terms' ;
-@use './layouts/header' ;
-@use './layouts/hero' ;
-@use './layouts/modal' ;
-@use './layouts/section' ;
-@use './layouts/traditions' ;
+@import './components/buttons' ;
+@import './components/carousel-button' ;
+@import './components/chef-card' ;
+@import './components/format-card' ;
+@import './components/inputs' ;
+@import './components/links' ;
 
-@use './utils/fonts' ;
-@use './utils/text' ;
-@use './utils/utils' ;
-@use './utils/variables' 
+@import './base' ;
+
+@import './layouts/advantages' ;
+@import './layouts/chefs' ;
+@import './layouts/contacts' ;
+@import './layouts/footer' ;
+@import './layouts/formats' ;
+@import './layouts/form-terms' ;
+@import './layouts/header' ;
+@import './layouts/hero' ;
+@import './layouts/mobile-menu' ;
+@import './layouts/modal' ;
+@import './layouts/section' ;
+@import './layouts/traditions' ;
